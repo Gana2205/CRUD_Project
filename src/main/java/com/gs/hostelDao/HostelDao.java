@@ -54,6 +54,8 @@ public class HostelDao
     	 int c = p.executeUpdate();
     	 
     	 System.out.println(c +" /rows effected");
+    	 
+    	 //git hub sys
 		
 	}
 	
