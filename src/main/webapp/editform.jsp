@@ -8,10 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="lavender">
-      <h3><%=session.getAttribute("hd")%></h3>
        <% HostelDetails hd = (HostelDetails)session.getAttribute("hd"); %>
      <table align="center" border=5 width="60%" bordercolor="black" bgcolor="lightblue"><tr ><td >
-      <form action="Update" method="post">
+      <form action="Update" method="get">
        <div align="center" style="width:100%">
         <h1 style="text-align:center;">HOSTEL ADMISSION</h1>
          <table  style="width:70%">

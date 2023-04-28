@@ -15,19 +15,14 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class Update extends HttpServlet 
 {
+	private static final long serialVersionUID = 1L;
+
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-	{
-		
-		doGet(request, response);
-
-		  String roomno = request.getParameter("roomno");
+		 String roomno = request.getParameter("roomno");
 	      String name = request.getParameter("name");
 	      String mblno = request.getParameter("mblno");
 	      String occupation = request.getParameter("occupation");
@@ -35,9 +30,9 @@ public class Update extends HttpServlet
 	      String fee =request.getParameter("fee");
 	      String doj = request.getParameter("doj");
 	      
-         HostelDetails hd = new HostelDetails();	
-         
-           hd.setRoomno(roomno);
+        HostelDetails hd = new HostelDetails();	
+        
+          hd.setRoomno(roomno);
 	       hd.setName(name);
 	       hd.setMblno(mblno);
 	       hd.setOccupation(occupation);
@@ -46,7 +41,6 @@ public class Update extends HttpServlet
 		   hd.setDoj(doj);
 		   
 		   HostelDao db = new HostelDao();
-		
 		try 
 		{
 			db.updateDetails(hd,id,mblno);
@@ -60,4 +54,12 @@ public class Update extends HttpServlet
 		}
 	}
 
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+		
+		doGet(request, response);
+	}
 }
+
+		 
