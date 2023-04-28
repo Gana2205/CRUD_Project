@@ -12,16 +12,15 @@ public class HostelDetails
     private String doj;
     
     
-    
-	
-	public HostelDetails()
+    public HostelDetails()
 	{
 		super();
 	
 	}
 	
 	public HostelDetails(String roomno, String name, String mblno, String occupation, String id, String fee,
-			String doj) {
+			String doj) 
+	{
 		super();
 		this.roomno = roomno;
 		this.name = name;

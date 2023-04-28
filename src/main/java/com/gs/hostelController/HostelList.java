@@ -13,11 +13,9 @@ import com.gs.hostelDao.HostelDao;
 import com.gs.hostelDetails.HostelDetails;
 
 //show all hostelrs list
-public class HostelList extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+public class HostelList extends HttpServlet 
+{
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	
 	{
 	
@@ -40,10 +38,7 @@ public class HostelList extends HttpServlet {
 			
 			e.printStackTrace();
 		}
-		
-		
-		
-		
+			
 	}
 
 

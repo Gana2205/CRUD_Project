@@ -16,13 +16,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-//show All details of hostelrs by roomno
+//show All details of hostlers by roomno
 public class ShowDetails extends HttpServlet 
 {
-	private static final long serialVersionUID = 1L;
-
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException
+	{
 		
 		resp.setContentType("text/html");
 	
@@ -37,22 +36,14 @@ public class ShowDetails extends HttpServlet
 			request.setAttribute("hd",hd);
 			RequestDispatcher rd = request.getRequestDispatcher("show.jsp");
 			rd.forward(request, resp);
-			
-						
+							
 		} 
 		catch (Exception e)
 		{
 			
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
+			
 	}
-
-	
-  
 
 }

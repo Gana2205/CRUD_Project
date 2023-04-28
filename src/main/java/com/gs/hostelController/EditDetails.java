@@ -12,15 +12,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 //Edit details of hostelers
-public class EditDetails extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+public class EditDetails extends HttpServlet
+{
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 
-		
 		String roomno = request.getParameter("roomno");
 		String id = request.getParameter("id");
 		

@@ -11,10 +11,9 @@ import com.gs.hostelDetails.HostelDetails;
 
 public class HostelDao 
 {
-   
-	String url ="jdbc:mysql://localhost:3306/gs";
+     String url ="jdbc:mysql://localhost:3306/gs";
 	 String uname = "root";
-	String pass ="gana123";
+	 String pass ="gana123";
 	
 	//get connection of database
 	public  Connection getConnection() throws Exception
@@ -37,12 +36,9 @@ public class HostelDao
 		String sql = "insert into gs.Hostelers(roomno,name,mblno,occupation,id,fee,doj) values (?,?,?,?,?,?,?);"; 
 		
 		Connection con = getConnection();
-		System.out.println("gana");
-		
 		PreparedStatement p = con.prepareStatement(sql);
-		System.out.println("ram");
-	
-		 p.setString(1,hd.getRoomno());
+		
+	     p.setString(1,hd.getRoomno());
     	 p.setString(2,hd.getName());
     	 p.setString(3,hd.getMblno());
     	 p.setString(4,hd.getOccupation());
@@ -54,13 +50,10 @@ public class HostelDao
     	 int c = p.executeUpdate();
     	 
     	 System.out.println(c +" /rows effected");
-    	 
-    	 //git hub sys
 		
 	}
 	
-	
-    //shows list of hostelers by roomno
+	 //shows list of hostelers by roomno
 	public List<HostelDetails> showDetails(String roomno) throws Exception 
 	
 	{
@@ -86,9 +79,7 @@ public class HostelDao
 			  hd.setFee(rs.getString("fee"));
 			  hd.setDoj(rs.getString("doj"));
 			  list.add(hd);
-			  
 		}
-		
 		
 		return list;
 	}
