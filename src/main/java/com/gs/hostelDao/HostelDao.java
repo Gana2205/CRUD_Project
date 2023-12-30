@@ -152,7 +152,7 @@ public class HostelDao
 
 	//retrieve all hostelers details
 	public List<HostelDetails> showDetails() throws Exception
-	{
+	  {
 		
 		String sql = "select * from hostelers";
 		Connection con = getConnection();
